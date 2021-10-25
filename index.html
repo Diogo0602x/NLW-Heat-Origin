@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Mayk Brito - DoWhile 2021</title>
+    <title>Diogo Sales Teixeira - DoWhile 2021</title>
 
     <link rel="stylesheet" href="style.css" />
 
@@ -21,44 +21,71 @@
           <span>
             <img src="images/build.svg" alt="Selo Rocketseat" />
           </span>
-          <img src="https://lorempixel.com/185/185/people" alt="Foto pessoal" />
+          <img
+            src="https://lorempixel.com/185/185/people/"
+            alt="Foto pessoal"
+          />
         </div>
 
-        <h1>Diogo Sales</h1>
-        <a href="https://instagram.com/_diogo0602">
-          <img src="images/github.svg" alt="ícone github" />@_diogo0602</a
+        <h1 id="userName">Diogo Sales Teixeira</h1>
+        <a href="https://github.com/Diogo0602x" target="_blank">
+          <img src="images/github.svg" alt="ícone github" />
+          Diogo0602x</a
         >
-        <p>An instructor focused on helping people start programming for web</p>
 
-        <ul>
-          <li>
-            <a href="https://youtube.com/maykbrito">
-              <img src="images/youtube.svg" alt="Ícone Youtube" target="_blank"
-            /></a>
+        <p>An instructor focused on helping pople start programming for web</p>
+
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://youtube.com/maykbrito" target="_blank">
+              <img src="images/youtube.svg" alt="ícone youtube" />
+            </a>
           </li>
-          <li>
-            <a href="https://facebook.com/diogo0602">
-              <img
-                src="images/facebook.svg"
-                alt="Ícone Facebook"
-                target="_blank"
-            /></a>
+          <li class="facebook">
+            <a href="https://facebook.com/diogo0602" target="_blank">
+              <img src="images/facebook.svg" alt="ícone facebook" />
+            </a>
           </li>
-          <li>
-            <a href="https:/instagram/_diogo0602">
-              <img
-                src="images/instagram.svg"
-                alt="Ícone Instagram"
-                target="_blank"
-            /></a>
+          <li class="instagram">
+            <a href="https://instagram.com/diogosalest" target="_blank">
+              <img src="images/instagram.svg" alt="ícone instagram" />
+            </a>
           </li>
-          <li>
-            <a href="https://twitter.com/maykbrito">
-              <img src="images/twitter.svg" alt="Ícone Twiiter" target="_blank"
-            /></a>
+          <li class="twitter">
+            <a href="https://twitter.com/maykbrito" target="_blank">
+              <img src="images/twitter.svg" alt="ícone twitter" />
+            </a>
           </li>
         </ul>
       </div>
     </main>
+
+    <script>
+      const LinksSocialMedia = {
+        github: 'Diogo0602x',
+        youtube: 'jakelinygracielly',
+        facebook: 'diogo0602',
+        instagram: 'diogosalest',
+        twitter: 'jakelinytec'
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+
+          alert(li.children[0].href)
+        }
+      }
+
+      // i = i + 1
+      // i++
+
+      // ser humano 12345678910
+      //computador 0123456789
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
